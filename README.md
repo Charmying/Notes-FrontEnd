@@ -11,3 +11,5 @@
 `2024-08-13` [什麼是 IIFE](https://github.com/Charmying/FrontEnd-Notes/issues/3)
 
 `2024-08-17` [JavaScript 函式 (function) 介紹](https://github.com/Charmying/FrontEnd-Notes/issues/4)
+
+`2024-08-18` [箭頭函式 (Arrow Function)](https://github.com/Charmying/FrontEnd-Notes/issues/5)
