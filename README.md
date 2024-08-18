@@ -13,3 +13,5 @@
 `2024-08-17` [JavaScript 函式 (function) 介紹](https://github.com/Charmying/FrontEnd-Notes/issues/4)
 
 `2024-08-18` [箭頭函式 (Arrow Function)](https://github.com/Charmying/FrontEnd-Notes/issues/5)
+
+`2024-08-19` [一般函式和箭頭函式的差別)](https://github.com/Charmying/FrontEnd-Notes/issues/6)
