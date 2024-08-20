@@ -17,3 +17,5 @@
 `2024-08-19` [一般函式和箭頭函式的差別)](https://github.com/Charmying/FrontEnd-Notes/issues/6)
 
 `2024-08-20` [Javascript 的作用域 (Scope) 與作用域鏈 (Scope Chain)](https://github.com/Charmying/FrontEnd-Notes/issues/7)
+
+`2024-08-21` [undefined、undeclared 和 null 的差別](https://github.com/Charmying/FrontEnd-Notes/issues/8)
