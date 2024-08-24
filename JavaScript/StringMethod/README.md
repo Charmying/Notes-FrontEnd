@@ -16,3 +16,5 @@ let str = "Hello, world";
 console.log(str.includes('Hello'));   // true
 console.log(str.includes('World'));   // false
 ```
+
+在這個範例中，`console.log(str.includes('Hello'))` 回傳 true 是因為 Hello 存在於字串中。但 `console.log(str.includes('World'))` 回傳 false 是因為 includes() 會區分大小寫。
