@@ -6,11 +6,11 @@
 
 `2024-08-11` [var、let 和 const 的差別](https://github.com/Charmying/Notes-FrontEnd/issues/1)
 
-`2024-08-12` [什麼是 暫時死區 (TDZ)](https://github.com/Charmying/Notes-FrontEnd/issues/2)
+`2024-08-12` [暫時死區 (TDZ)](https://github.com/Charmying/Notes-FrontEnd/issues/2)
 
-`2024-08-13` [什麼是 IIFE](https://github.com/Charmying/Notes-FrontEnd/issues/3)
+`2024-08-13` [立即調用函式表達式 (IIFE)](https://github.com/Charmying/Notes-FrontEnd/issues/3)
 
-`2024-08-17` [JavaScript 函式 (function) 介紹](https://github.com/Charmying/Notes-FrontEnd/issues/4)
+`2024-08-17` [JavaScript 函式 (function)](https://github.com/Charmying/Notes-FrontEnd/issues/4)
 
 `2024-08-18` [箭頭函式 (Arrow Function)](https://github.com/Charmying/Notes-FrontEnd/issues/5)
 
