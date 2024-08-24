@@ -14,7 +14,7 @@
 
 `2024-08-18` [箭頭函式 (Arrow Function)](https://github.com/Charmying/Notes-FrontEnd/issues/5)
 
-`2024-08-19` [一般函式和箭頭函式的差別)](https://github.com/Charmying/Notes-FrontEnd/issues/6)
+`2024-08-19` [一般函式和箭頭函式的差別](https://github.com/Charmying/Notes-FrontEnd/issues/6)
 
 `2024-08-20` [Javascript 的作用域 (Scope) 與作用域鏈 (Scope Chain)](https://github.com/Charmying/Notes-FrontEnd/issues/7)
 
