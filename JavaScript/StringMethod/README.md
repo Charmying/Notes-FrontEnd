@@ -36,3 +36,20 @@ console.log(str.indexOf('World'));   // -1
 ```
 
 在這個範例中，`console.log(str.indexOf('Hello'))` 回傳 0 是因為 Hello 從字串中的第一個位置開始，`console.log(str.indexOf('world'))` 回傳 7 是因為 world 從字串中的第七個位置開始，而 `console.log(str.indexOf('World'))` 回傳 -1 是因為字串中找不到 World。
+
+<br />
+
+## lastIndexOf()
+
+功能與 indexOf() 類似，但 lastIndexOf() 回傳子字串最後一次出現的位置的索引。如果沒有找到子字串會回傳 -1。
+
+lastIndexOf() 適合需要從後向前找子字串的位置。
+
+```
+let str = "Hello, world! Hello";
+
+console.log(str.lastIndexOf('Hello'));   // 14
+console.log(str.lastIndexOf('world'));   // 7
+```
+
+在這個範例中，`console.log(str.lastIndexOf('Hello'))` 回傳 14 是因為 Hello 在字串中最後一次出現於索引 14 的位置。
