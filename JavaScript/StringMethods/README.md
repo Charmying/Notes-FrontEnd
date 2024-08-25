@@ -81,3 +81,18 @@ let str = "Hello, world";
 console.log(str.endsWith('Hello'));   // false
 console.log(str.endsWith('world!'));   // true
 ```
+
+<br />
+
+## search()
+
+使用正規表達式在字串中搜尋，並回傳第一個匹配項的索引。如果沒有匹配項，回傳 -1。
+
+search() 在需要複雜搜尋模式時非常有用。
+
+```
+let str = "My name is Charmy.";
+
+console.log(str.search(/Charmy/));   // 11
+console.log(str.search(/QQQ/));   // -1
+```
