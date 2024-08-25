@@ -111,3 +111,23 @@ let str = "My name is Charmy. Charmy is so cooooooooool";
 console.log(str.match(/Charmy/gi));   // ['Charmy', 'Charmy']
 console.log(str.match(/QQQ/));   // null
 ```
+
+<br />
+
+## slice()
+
+擷取字串的一部分，回傳新字串。
+
+可接受兩個參數：起始索引 (包含) 和結束索引 (不包含)。
+
+若未指定結束索引，則擷取到字串的結尾。支援負索引，從字串末尾開始計算。
+
+```
+let str = "Hello, world";
+
+console.log(str.slice(0, 5));   // Hello
+console.log(str.slice(7));   // world
+console.log(str.slice(-5));   // world
+```
+
+在這個範例中，`str.slice(0, 5)` 擷取從索引 0 到索引 5 的字串 (不包含索引 5)，也就是 Hello。`str.slice(7)` 擷取從索引 7 開始到結尾的字串，也就是 world。`str.slice(-6)` 使用負索引，從字串末尾擷取 world。
