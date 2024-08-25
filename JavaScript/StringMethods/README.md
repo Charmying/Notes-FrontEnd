@@ -1,6 +1,6 @@
-# String Method
+# String Methods
 
-以下是 JavaScript 的 String Method 整理。
+以下是 JavaScript 的 String Methods 整理。
 
 <br />
 
