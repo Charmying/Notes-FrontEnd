@@ -96,3 +96,18 @@ let str = "My name is Charmy.";
 console.log(str.search(/Charmy/));   // 11
 console.log(str.search(/QQQ/));   // -1
 ```
+
+<br />
+
+## match()
+
+使用正規表達式比對字串，回傳一個包含匹配結果的陣列或 null。
+
+match() 常用於提取符合特定模式的子字串。
+
+```
+let str = "My name is Charmy. Charmy is so cooooooooool";
+
+console.log(str.match(/Charmy/gi));   // ['Charmy', 'Charmy']
+console.log(str.match(/QQQ/));   // null
+```
