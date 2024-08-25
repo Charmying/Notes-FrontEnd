@@ -53,3 +53,18 @@ console.log(str.lastIndexOf('world'));   // 7
 ```
 
 在這個範例中，`console.log(str.lastIndexOf('Hello'))` 回傳 14 是因為 Hello 在字串中最後一次出現於索引 14 的位置。
+
+<br />
+
+## startsWith()
+
+檢查字串是否以指定的子字串開頭。回傳布林值 true 或 false。
+
+startsWith() 常用於判斷字串是否符合某種開頭模式。
+
+```
+let str = "Hello, world";
+
+console.log(str.startsWith('Hello'));   // true
+console.log(str.startsWith('world'));   // false
+```
