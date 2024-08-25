@@ -68,3 +68,16 @@ let str = "Hello, world";
 console.log(str.startsWith('Hello'));   // true
 console.log(str.startsWith('world'));   // false
 ```
+
+<br />
+
+## endsWith()
+
+檢查字串是否以指定的子字串結束。回傳布林值 true 或 false。這方法常用於判斷字串是否符合某種結尾模式。
+
+```
+let str = "Hello, world";
+
+console.log(str.endsWith('Hello'));   // false
+console.log(str.endsWith('world!'));   // true
+```
