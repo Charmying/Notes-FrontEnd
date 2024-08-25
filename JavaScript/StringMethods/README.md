@@ -131,3 +131,22 @@ console.log(str.slice(-5));   // world
 ```
 
 在這個範例中，`str.slice(0, 5)` 擷取從索引 0 到索引 5 的字串 (不包含索引 5)，也就是 Hello。`str.slice(7)` 擷取從索引 7 開始到結尾的字串，也就是 world。`str.slice(-6)` 使用負索引，從字串末尾擷取 world。
+
+<br />
+
+## substring()
+
+與 slice() 類似，但不接受負索引。
+
+substring() 擷取的字串部分從 start 開始到 end (不包含)。
+
+若未指定 end，則擷取到字串的結尾。
+
+```
+let str = "Hello, world";
+
+console.log(str.substring(0, 5));   // Hello
+console.log(str.substring(7));   // world
+```
+
+在這個範例中，`str.substring(0, 5)` 和 `str.slice(0, 5)` 相似，回傳 Hello。而 `str.substring(7)` 與 `str.slice(7)` 相似，回傳 world。
