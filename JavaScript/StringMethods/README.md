@@ -150,3 +150,18 @@ console.log(str.substring(7));   // world
 ```
 
 在這個範例中，`str.substring(0, 5)` 和 `str.slice(0, 5)` 相似，回傳 Hello。而 `str.substring(7)` 與 `str.slice(7)` 相似，回傳 world。
+
+<br />
+
+## split()
+
+將字串依照指定的分隔符號分割成多個子字串，並回傳一個陣列。
+
+split() 常用於將字串轉換為陣列，以便進行更靈活的操作。
+
+```
+let str = "aaa, bbb, ccc";
+
+console.log(str.split(', '));   // ['aaa', 'bbb', 'ccc']
+console.log(str.split(''));   // ['a', 'a', 'a', ',', ' ', 'b', 'b', 'b', ',', ' ', 'c', 'c', 'c']
+```
