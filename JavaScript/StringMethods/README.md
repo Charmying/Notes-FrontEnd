@@ -194,3 +194,17 @@ let str = "Hello, WORLD";
 
 console.log(str.toLowerCase());   // hello, world
 ```
+
+<br />
+
+## toUpperCase()
+
+將字串中的所有字元轉換為大寫字母，並回傳新字串。
+
+toUpperCase() 常用於需要強調或統一格式的情況。
+
+```
+let str = "Hello, world";
+
+console.log(str.toUpperCase());   // HELLO, WORLD
+```
