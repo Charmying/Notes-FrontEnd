@@ -165,3 +165,18 @@ let str = "aaa, bbb, ccc";
 console.log(str.split(', '));   // ['aaa', 'bbb', 'ccc']
 console.log(str.split(''));   // ['a', 'a', 'a', ',', ' ', 'b', 'b', 'b', ',', ' ', 'c', 'c', 'c']
 ```
+
+<br />
+
+## replace()
+
+將字串中符合條件的部分替換為另一個字串，可接受字串或正規表達式作為替換條件。
+
+replace() 常用於格式化或清理字串內容。
+
+```
+let str = "Hello, world";
+
+console.log(str.replace('world', 'JavaScript')); // "Hello, JavaScript"
+console.log(str.replace(/hello/i, 'Hi')); // "Hi, world"
+```
