@@ -180,3 +180,17 @@ let str = "Hello, world";
 console.log(str.replace('world', 'JavaScript')); // "Hello, JavaScript"
 console.log(str.replace(/hello/i, 'Hi')); // "Hi, world"
 ```
+
+<br />
+
+## toLowerCase()
+
+將字串中的所有字元轉換為小寫字母，並回傳新字串。
+
+toLowerCase() 常用於處理不分大小寫的比較。
+
+```
+let str = "Hello, WORLD";
+
+console.log(str.toLowerCase());   // hello, world
+```
