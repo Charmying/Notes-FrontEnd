@@ -208,8 +208,3 @@ let str = "Hello, world";
 
 console.log(str.toUpperCase());   // HELLO, WORLD
 ```
-
-let str = "   Hello, world   ";
-
-console.log(str.trim());   // Hello, world
-```
