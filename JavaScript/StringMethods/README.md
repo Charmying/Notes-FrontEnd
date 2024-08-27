@@ -208,17 +208,3 @@ let str = "Hello, world";
 
 console.log(str.toUpperCase());   // HELLO, WORLD
 ```
-
-<br />
-
-## trim()
-
-移除字串開頭和結尾的空白字元 (包括空格、換行符號等)，並回傳新字串。
-
-trim() 常用於清理使用者輸入或格式化字串。
-
-```
-let str = "   Hello, world   ";
-
-console.log(str.trim());   // Hello, world
-```
