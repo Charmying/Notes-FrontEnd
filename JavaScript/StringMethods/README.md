@@ -243,3 +243,24 @@ console.log(str.trimLeft());   // Hello, world
 trimStart() 和 trimLeft() 的功能相同。
 
 舊方法 str.trimLeft() 依然可以使用，但建議轉換成新的 str.trimStart() 方法來確保程式碼的未來兼容性。
+
+<br />
+
+## trimEnd() & trimRight()
+
+移除字串結尾的空白字元，並回傳新字串。
+
+trimEnd() & trimRight() 常用於需要只移除結尾空白的情況。
+
+```
+let str = "Hello, world   ";
+
+console.log(str.trimEnd());   // Hello, world
+console.log(str.trimRight());   // Hello, world
+```
+
+在 ECMAScript 2020 (ES11) 中，trimRight() 方法已被標記為淘汰，並且被替換為 trimEnd() 方法。
+
+trimEnd() 和 trimRight() 的功能相同。
+
+舊方法 trimRight() 依然可以使用，但建議轉換成新的 trimEnd() 方法來確保程式碼的未來兼容性。
