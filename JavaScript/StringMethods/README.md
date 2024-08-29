@@ -222,3 +222,24 @@ let str = "   Hello, world   ";
 
 console.log(str.trim());   // Hello, world
 ```
+
+<br />
+
+## trimStart() & trimLeft()
+
+移除字串開頭的空白字元，並回傳新字串。
+
+trimStart() & trimLeft() 常用於需要只移除開頭空白的情況。
+
+```
+let str = "   Hello, world";
+
+console.log(str.trimStart());   // Hello, world
+console.log(str.trimLeft());   // Hello, world
+```
+
+在 ECMAScript 2020 (ES11) 中，str.trimLeft() 方法已被標記為淘汰，並且被替換為 str.trimStart() 方法。
+
+trimStart() 和 trimLeft() 的功能相同。
+
+舊方法 str.trimLeft() 依然可以使用，但建議轉換成新的 str.trimStart() 方法來確保程式碼的未來兼容性。
