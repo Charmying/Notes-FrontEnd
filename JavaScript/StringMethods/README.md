@@ -264,3 +264,19 @@ console.log(str.trimRight());   // Hello, world
 trimEnd() 和 trimRight() 的功能相同。
 
 舊方法 trimRight() 依然可以使用，但建議轉換成新的 trimEnd() 方法來確保程式碼的未來兼容性。
+
+<br />
+
+## concat()
+
+合併兩個或多個字串，並回傳新的合併字串。
+
+concat() 適合於需要將多個字串結合在一起的操作。
+
+```
+let str1 = "Hello";
+let str2 = "world";
+let str = str1.concat(', ', str2)
+
+console.log(str);   // Hello, world
+```
