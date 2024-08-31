@@ -280,3 +280,18 @@ let str = str1.concat(', ', str2)
 
 console.log(str);   // Hello, world
 ```
+
+<br />
+
+## charAt()
+
+回傳指定索引位置的字元。
+
+charAt() 常用於需要單獨取得字串中的特定字元。
+
+```
+let str = "Hello, world";
+
+console.log(str.charAt(0));   // H
+console.log(str.charAt(7));   // w
+```
