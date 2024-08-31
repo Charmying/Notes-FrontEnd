@@ -295,3 +295,17 @@ let str = "Hello, world";
 console.log(str.charAt(0));   // H
 console.log(str.charAt(7));   // w
 ```
+
+<br />
+
+## repeat()
+
+將字串重複指定次數，並回傳新字串。
+
+repeat() 常用於需要重複某段字串的情況。
+
+```
+let str = "Ha";
+
+console.log(str.repeat(3));   // HaHaHa
+```
