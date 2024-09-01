@@ -309,3 +309,28 @@ let str = "Ha";
 
 console.log(str.repeat(3));   // HaHaHa
 ```
+
+<br />
+
+## padStart()
+
+在字串前端填充指定的字元，直到達到指定的長度。
+
+padStart() 常用於格式化字串使其達到特定長度。
+
+```
+let str = "QQQ";
+
+console.log(str.padStart(5, '0'));   // 00QQQ
+```
+
+在這個範例中，`str.padStart(5, '0')` 在字串 QQQ 前填充兩個 0，使其達到長度 5，結果為 00QQQ。
+
+0 是預設的填充值，如果想自訂填充值的話，可以根據以下方法進行修改。
+
+```
+let str = "QQQ";
+
+console.log(str.padStart(5, '*'));   // **QQQ
+console.log(str.padStart(8, 'abc'));   // abcabQQQ
+```
