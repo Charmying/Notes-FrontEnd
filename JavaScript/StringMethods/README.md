@@ -334,3 +334,28 @@ let str = "QQQ";
 console.log(str.padStart(5, '*'));   // **QQQ
 console.log(str.padStart(8, 'abc'));   // abcabQQQ
 ```
+
+<br />
+
+## padEnd()
+
+在字串後端填充指定的字元，直到達到指定的長度。
+
+padEnd() 常用於格式化字串使其達到特定長度。
+
+```
+let str = "QQQ";
+
+console.log(str.padEnd(5, '0'));   // QQQ00
+```
+
+在這個範例中，`str.padEnd(5, '0')` 在字串 QQQ 後填充兩個 0，使其達到長度 5，結果為 QQQ00。
+
+0 是預設的填充值，如果想自訂填充值的話，可以根據以下方法進行修改。
+
+```
+let str = "QQQ";
+
+console.log(str.padEnd(5, '*'));   // QQQ**
+console.log(str.padEnd(8, 'abc'));   // QQQabcab
+```
