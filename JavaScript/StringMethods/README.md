@@ -225,9 +225,9 @@ console.log(str.trim());   // Hello, world
 
 <br />
 
-## trimStart() & trimLeft()
+## trimStart()
 
-移除字串開頭的空白字元，並回傳新字串。
+移除字串開頭的空白字元，並回傳新字串，trimLeft() 也有相同的功用。
 
 trimStart() & trimLeft() 常用於需要只移除開頭空白的情況。
 
@@ -246,9 +246,9 @@ trimStart() 和 trimLeft() 的功能相同。
 
 <br />
 
-## trimEnd() & trimRight()
+## trimEnd()
 
-移除字串結尾的空白字元，並回傳新字串。
+移除字串結尾的空白字元，並回傳新字串，trimRight() 也有相同的功用。
 
 trimEnd() & trimRight() 常用於需要只移除結尾空白的情況。
 
