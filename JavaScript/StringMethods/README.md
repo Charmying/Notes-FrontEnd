@@ -4,52 +4,6 @@
 
 <br />
 
-## 索引
-
-- [includes()](#includes())：檢查字串中是否存在某些關鍵字或特定內容。
-
-- [indexOf()](#indexOf())：找出子字串第一次出現的位置。
-
-- [lastIndexOf()](#lastIndexOf())：功能與 indexOf() 類似，但 lastIndexOf() 回傳子字串最後一次出現的位置的索引。
-
-- [startsWith()](#startsWith())：檢查字串是否以指定的子字串開頭。
-
-- [endsWith()](#endsWith())：檢查字串是否以指定的子字串結束。
-
-- [search()](#search())：使用正規表達式在字串中搜尋，並回傳第一個匹配項的索引。
-
-- [match()](#match())：使用正規表達式比對字串，回傳一個包含匹配結果的陣列或 null。
-
-- [slice()](#slice())：擷取字串的一部分，回傳新字串。
-
-- [substring()](#substring())：與 slice() 類似，但不接受負索引。
-
-- [split()](#split())：將字串依照指定的分隔符號分割成多個子字串，並回傳一個陣列。
-
-- [replace()](#replace())：將字串中符合條件的部分替換為另一個字串。
-
-- [toLowerCase()](#toLowerCase())：將字串中的所有字元轉換為小寫字母，並回傳新字串。
-
-- [toUpperCase()](#toUpperCase())：將字串中的所有字元轉換為大寫字母，並回傳新字串。
-
-- [trim()](#trim())：移除字串開頭和結尾的空白字元並回傳新字串。
-
-- [trimStart()](#trimStart())：移除字串開頭的空白字元，並回傳新字串。
-
-- [trimEnd()](#trimEnd())：移除字串結尾的空白字元，並回傳新字串。
-
-- [concat()](#concat())：合併兩個或多個字串，並回傳新的合併字串。
-
-- [charAt()](#charAt())：回傳指定索引位置的字元。
-
-- [repeat()](#repeat())：將字串重複指定次數，並回傳新字串。
-
-- [padStart()](#padStart())：在字串前端填充指定的字元，直到達到指定的長度。
-
-- [padEnd()](#padEnd())：在字串後端填充指定的字元，直到達到指定的長度。
-
-<br />
-
 ## includes()
 
 用於檢查字串中是否包含某個子字串。這個方法會回傳布林值 (true 或 false)，表示字串是否包含指定的子字串。
