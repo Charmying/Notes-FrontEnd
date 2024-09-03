@@ -19,3 +19,5 @@
 `2024-08-20` [Javascript 的作用域 (Scope) 與作用域鏈 (Scope Chain)](https://github.com/Charmying/Notes-FrontEnd/issues/7)
 
 `2024-08-21` [undefined、undeclared 和 null 的差別](https://github.com/Charmying/Notes-FrontEnd/issues/8)
+
+`2024-09-04` [Angular CLI 如何部署到 GitHub 上並取得 GitHub Pages 網址](https://github.com/Charmying/Notes-FrontEnd/issues/9)
