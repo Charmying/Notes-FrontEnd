@@ -4,13 +4,15 @@
 
 <br />
 
-## .component 檔案
+## .component 檔
+
+用途： Component 是 Angular 應用程式的基本構建塊。每個組件負責管理應用程式中特定的視圖和相關的功能。
 
 - `.component.ts`
 
     功能： 定義組件的類別和功能，包括資料綁定、事件處理等。
 
-    內容： 包含 TypeScript 類別，裝飾器 `@Component` 用來指定組件的元資料，例如：模板、樣式等。
+    內容： 包含 TypeScript 類別，裝飾器 `@Component` 用來指定組件的元資料，例如：模板 (template)、樣式 (css/scss)等。
 
 - `.component.html`
 
