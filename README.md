@@ -23,3 +23,5 @@
 `2024-09-04` [Angular CLI 如何部署到 GitHub 上並取得 GitHub Pages 網址](https://github.com/Charmying/Notes-FrontEnd/issues/9)
 
 `2024-09-07` [Angular 的 standalone](https://github.com/Charmying/Notes-FrontEnd/issues/10)
+
+`2024-09-14` [Angular 的 Pipe](https://github.com/Charmying/Notes-FrontEnd/issues/11)
