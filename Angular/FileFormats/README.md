@@ -43,3 +43,34 @@ export class ExampleComponent {
   title = 'Hello World';
 }
 ```
+
+<br />
+
+## .service 檔
+
+用途： service 用於封裝和共享應用程式中的功能，例如：資料獲取、業務處理等。service 有助於保持組件的簡潔，促進程式碼的可重用性和可測試性。
+
+- `.service.ts`
+
+    功能：定義 service 的類別和相關方法。
+    
+    內容：包含帶有 @Injectable 裝飾器的 TypeScript 類別，該裝飾器允許 service 被 inject 到其他 component 或 service 中。
+
+```
+// example.service.ts
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+    providedIn: 'root'
+})
+
+export class ExampleService {
+    constructor(private http: HttpClient) {}
+
+    getData() {
+        return this.http.get('https://api.example.com/data');
+    }
+}
+```
