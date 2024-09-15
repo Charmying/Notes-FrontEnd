@@ -25,3 +25,5 @@
 `2024-09-07` [Angular 的 standalone](https://github.com/Charmying/Notes-FrontEnd/issues/10)
 
 `2024-09-14` [Angular 的 Pipe](https://github.com/Charmying/Notes-FrontEnd/issues/11)
+
+`2024-09-15` [Angular 的 FormGroup](https://github.com/Charmying/Notes-FrontEnd/issues/12)
