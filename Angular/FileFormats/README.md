@@ -56,24 +56,24 @@ export class ExampleComponent {
     
     內容：包含帶有 @Injectable 裝飾器的 TypeScript 類別，該裝飾器允許 service 被 inject 到其他 component 或 service 中。
 
-```
-// example.service.ts
+    ```
+    // example.service.ts
 
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+    import { Injectable } from '@angular/core';
+    import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-    providedIn: 'root'
-})
+    @Injectable({
+        providedIn: 'root'
+    })
 
-export class ExampleService {
-    constructor(private http: HttpClient) {}
+    export class ExampleService {
+        constructor(private http: HttpClient) {}
 
-    getData() {
-        return this.http.get('https://api.example.com/data');
+        getData() {
+            return this.http.get('https://api.example.com/data');
+        }
     }
-}
-```
+    ```
 
 <br />
 
