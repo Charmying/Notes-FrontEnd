@@ -121,7 +121,7 @@ export class ExampleComponent {
     @Component({
         selector: 'app-root',
         standalone: true,
-        imports: [RouterOutlet],
+        imports: [ RouterOutlet ],
         templateUrl: './app.component.html',
         styleUrl: './app.component.scss'
     })
@@ -157,8 +157,8 @@ export class ExampleComponent {
     ];
 
     @NgModule({
-        imports: [RouterModule.forRoot(routes)],
-        exports: [RouterModule]
+        imports: [ RouterModule.forRoot(routes) ],
+        exports: [ RouterModule ]
     })
 
     export class AppRoutingModule {}
@@ -185,7 +185,7 @@ export class ExampleComponent {
             AppRoutingModule
         ],
         providers: [],
-        bootstrap: [AppComponent]
+        bootstrap: [ AppComponent ]
     })
 
     export class AppModule {}
