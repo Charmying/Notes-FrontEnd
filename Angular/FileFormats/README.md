@@ -74,3 +74,119 @@ export class ExampleService {
     }
 }
 ```
+
+<br />
+
+## .route 檔
+
+用途： route 檔案定義應用程式的 routing 配置，決定不同的 URL 對應哪個組件，實現單頁應用程式 (SPA )的導航。
+
+- `.route.ts` 或 `app-routing.module.ts`
+
+    功能： 定義 routing 陣列，設定 routing 路徑、對應的 component 和其他 routing 選項。
+
+    內容： 包含 routing 配置，使用 Angular 的 RouterModule 進行導入和導出。
+
+<br />
+
+### `.route.ts` 和 `app-routing.module.ts` 的差異
+
+- `.route.ts`
+
+    比較簡單且常見的一種 routing 設定方式，通常是在專案中單獨的檔案內設定 routing 規則。
+
+    通常適用於使用獨立元件 (Standalone Components)，可以在這個檔案中直接定義 routing 陣列，並在根組件中使用 `RouterModule.forRoot(routes)` 或 `RouterModule.forChild(routes)` 來進行配置。
+
+    比較適合單一檔案配置，讓 routing 更集中、更簡潔。
+
+    ```
+    // app.routes.ts
+
+    import { Routes } from '@angular/router';
+    import { HomeComponent } from './home/home.component';
+    import { AboutComponent } from './about/about.component';
+
+    export const routes: Routes = [
+        { path: '', component: HomeComponent },
+        { path: 'about', component: AboutComponent },
+    ];
+    ```
+    
+    ```
+    // app.component.ts
+
+    import { Component } from '@angular/core';
+    import { RouterOutlet } from '@angular/router';
+
+    @Component({
+        selector: 'app-root',
+        standalone: true,
+        imports: [RouterOutlet],
+        templateUrl: './app.component.html',
+        styleUrl: './app.component.scss'
+    })
+
+    export class AppComponent {}
+    ```
+    
+    ```
+    <!-- app.component.html -->
+
+    <router-outlet />
+    ```
+
+- `app-routing.module.ts`
+
+    Angular 傳統的 routing 配置方式，通常是為了較大的專案而設計的。
+
+    routing 配置會放在 AppRoutingModule 模組中，並使用 @NgModule 來管理和匯出路由設定。
+
+    適合於非獨立元件 (使用模組系統的元件)，並且容易擴展和管理較大規模的專案。
+
+    ```
+    // app-routing.module.ts
+
+    import { NgModule } from '@angular/core';
+    import { RouterModule, Routes } from '@angular/router';
+    import { HomeComponent } from './home/home.component';
+    import { AboutComponent } from './about/about.component';
+
+    const routes: Routes = [
+        { path: '', component: HomeComponent },
+        { path: 'about', component: AboutComponent },
+    ];
+
+    @NgModule({
+        imports: [RouterModule.forRoot(routes)],
+        exports: [RouterModule]
+    })
+
+    export class AppRoutingModule {}
+    ```
+    
+    ```
+    // app.module.ts
+    
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppRoutingModule } from './app-routing.module';
+    import { AppComponent } from './app.component';
+    import { HomeComponent } from './home/home.component';
+    import { AboutComponent } from './about/about.component';
+
+    @NgModule({
+        declarations: [
+            AppComponent,
+            HomeComponent,
+            AboutComponent
+        ],
+        imports: [
+            BrowserModule,
+            AppRoutingModule
+        ],
+        providers: [],
+        bootstrap: [AppComponent]
+    })
+
+    export class AppModule {}
+    ```
