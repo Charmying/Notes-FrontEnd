@@ -215,3 +215,50 @@ Angular service 的設計理念是將應用程式的業務流程與視圖分離�
 
     export class AppModule {}
     ```
+
+<br />
+
+## .module 檔
+
+用途： Module 用於組織應用程式中的相關部分，將應用程式的功能分組，以便管理和加載。Module 通常包含 組件 (component)、指令 (directive)、管道 (pipe) 和服務 (service) 等，並組合成一個功能性單元。
+
+- `.module.ts`
+
+    功能： 定義一個 Angular 模組，指定其包含的組件、指令、Pipe，以及導入的其他模組。
+
+    內容： 包含帶有 `@NgModule` 裝飾器的類別，定義模組的元數據。
+    
+    - `@NgModule` 裝飾器：用於配置模組的元數據，包括組件、服務、指令和 Pipe 等的註冊。
+
+    ```
+    // app.module.ts
+
+    import { BrowserModule } from '@angular/platform-browser';
+    import { NgModule } from '@angular/core';
+    import { AppComponent } from './app.component';
+    import { ExampleComponent } from './example/example.component';
+
+    @NgModule({
+        declarations: [
+            AppComponent,
+            ExampleComponent
+        ],
+        imports: [
+            BrowserModule
+        ],
+        providers: [],
+        bootstrap: [ AppComponent ]
+    })
+
+    export class AppModule {}
+    ```
+
+    - `declarations`：指定該模組包含的組件、指令和管道。這裡註冊了 `AppComponent` 和 `ExampleComponent`。
+
+    - `imports`：指定該模組依賴的其他模組。這裡導入了 `BrowserModule`，這是所有 Angular 應用程式的必需模組。
+
+    - `providers`：指定服務提供者，通常用於註冊全局服務。
+
+    - `bootstrap`：指定應用程式的根組件，這個組件是應用程式啟動時顯示的第一個組件。
+
+Module 是 Angular 應用程式的基本結構單位，通過將組件、service 和其他功能組織在一起，幫助管理複雜的應用程式結構。
