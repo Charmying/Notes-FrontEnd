@@ -79,7 +79,7 @@ export class ExampleComponent {
 
 ## .route 檔
 
-用途： route 檔案定義應用程式的 routing 配置，決定不同的 URL 對應哪個組件，實現單頁應用程式 (SPA )的導航。
+用途： route 檔案定義應用程式的 routing (路由) 配置，決定不同的 URL 對應哪個組件，實現單頁應用程式 (SPA )的導航。
 
 - `.route.ts` 或 `app-routing.module.ts`
 
