@@ -52,11 +52,13 @@ export class ExampleComponent {
 }
 ```
 
+Angular 組件通過 `.html`、`.scss`、`.ts` 結合起來 (不一定需要 `.spec`)，形成了一個完整的功能模塊。組件的設計理念是將應用程式分解成小型、可重用的部分，提高開發效率和程式碼的可維護性。
+
 <br />
 
 ## .service 檔
 
-用途： service 用於封裝和共享應用程式中的功能，例如：資料獲取、業務處理等。service 有助於保持組件的簡潔，促進程式碼的可重用性和可測試性。
+用途： service 用於封裝和共享應用程式中的功能和操作，例如：資料獲取、業務處理等，並將這些功能操作與視圖 (組件) 分離。service 有助於保持組件的簡潔，促進程式碼的可重用性和可測試性。
 
 - `.service.ts`
 
@@ -82,18 +84,26 @@ export class ExampleComponent {
         }
     }
     ```
+    
+    - `@Injectable` 裝飾器用於標記這是一個 service，並告訴 Angular 可以被注入到其他組件或 service 中。
+
+        `providedIn: 'root'` 表示該 service 在應用程式的根層級可用，也就是說，可以在應用程式的任何部分都可以被注入。
+
+    - `HttpClient` 是 Angular 的內建 service，用於發送 HTTP 請求。這裡 `ExampleService` 使用 `HttpClient` 來向 API 發送 GET 請求並獲取資料。
+
+Angular service 的設計理念是將應用程式的業務流程與視圖分離，從而提高程式碼的可重用性和可測試性。service 可以輕鬆被不同的組件共享，使其適合處理應用程式中的跨組件應用。
 
 <br />
 
 ## .route 檔
 
-用途： route 檔案定義應用程式的 routing (路由) 配置，決定不同的 URL 對應哪個組件，實現單頁應用程式 (SPA )的導航。
+用途： route 檔案定義應用程式的路由 (routing) 配置，決定不同的 URL 對應哪個組件，實現單頁應用程式 (SPA) 的導航。
 
 - `.route.ts` 或 `app-routing.module.ts`
 
-    功能： 定義 routing 陣列，設定 routing 路徑、對應的 component 和其他 routing 選項。
+    功能： 定義路由陣列，設定路由路徑、對應的 component 和其他路由選項。
 
-    內容： 包含 routing 配置，使用 Angular 的 RouterModule 進行導入和導出。
+    內容： 包含路由配置，使用 Angular 的 RouterModule 進行導入和導出。
 
 <br />
 
@@ -101,11 +111,11 @@ export class ExampleComponent {
 
 - `.route.ts`
 
-    比較簡單且常見的一種 routing 設定方式，通常是在專案中單獨的檔案內設定 routing 規則。
+    比較簡單且常見的一種路由設定方式，通常是在專案中單獨的檔案內設定路由規則。
 
-    通常適用於使用獨立元件 (Standalone Components)，可以在這個檔案中直接定義 routing 陣列，並在根組件中使用 `RouterModule.forRoot(routes)` 或 `RouterModule.forChild(routes)` 來進行配置。
+    通常適用於使用獨立元件 (Standalone Components)，可以在這個檔案中直接定義路由陣列，並在根組件中使用 `RouterModule.forRoot(routes)` 或 `RouterModule.forChild(routes)` 來進行配置。
 
-    比較適合單一檔案配置，讓 routing 更集中、更簡潔。
+    比較適合單一檔案配置，讓路由更集中、更簡潔。
 
     ```
     // app.routes.ts
@@ -145,9 +155,9 @@ export class ExampleComponent {
 
 - `app-routing.module.ts`
 
-    Angular 傳統的 routing 配置方式，通常是為了較大的專案而設計的。
+    Angular 傳統的路由配置方式，通常是為了較大的專案而設計的。
 
-    routing 配置會放在 AppRoutingModule 模組中，並使用 @NgModule 來管理和匯出路由設定。
+    路由配置會放在 AppRoutingModule 模組中，並使用 `@NgModule` 來管理和匯出路由設定。
 
     適合於非獨立元件 (使用模組系統的元件)，並且容易擴展和管理較大規模的專案。
 
@@ -162,6 +172,7 @@ export class ExampleComponent {
     const routes: Routes = [
         { path: '', component: HomeComponent },
         { path: 'about', component: AboutComponent },
+        { path: '**', redirectTo: '' },   // 未匹配的路由導向至首頁
     ];
 
     @NgModule({
@@ -171,6 +182,12 @@ export class ExampleComponent {
 
     export class AppRoutingModule {}
     ```
+    
+    - `RouterModule.forRoot(routes)`：用於設定應用程式的主要路由配置。
+
+    - `path` 是 URL 路徑，component 是該路徑對應的組件。
+
+    - `**` 表示所有未匹配的路徑，這裡配置為重新導向至首頁。
     
     ```
     // app.module.ts
