@@ -262,3 +262,27 @@ Angular service 的設計理念是將應用程式的業務流程與視圖分離�
     - `bootstrap`：指定應用程式的根組件，這個組件是應用程式啟動時顯示的第一個組件。
 
 Module 是 Angular 應用程式的基本結構單位，通過將組件、service 和其他功能組織在一起，幫助管理複雜的應用程式結構。
+
+<br />
+
+## .model 檔
+
+用途： Model 用於定義應用程式中使用的資料結構和類型，提供強類型支持。
+
+- `.model.ts`
+
+    功能： 定義資料模型的介面或類別。
+
+    內容： 包含 TypeScript 介面或類別，描述資料的結構和屬性。
+
+    ```
+    // user.model.ts
+
+    export interface User {
+        id: number;
+        name: string;
+        email: string;
+    }
+    ```
+
+.model 檔為應用程式提供了資料結構的清晰定義，能夠幫助開發人員管理和操作資料，提高程式碼的可讀性和可維護性。
