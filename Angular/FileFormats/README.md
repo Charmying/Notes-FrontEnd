@@ -286,3 +286,61 @@ Module 是 Angular 應用程式的基本結構單位，通過將組件、service
     ```
 
 .model 檔為應用程式提供了資料結構的清晰定義，能夠幫助開發人員管理和操作資料，提高程式碼的可讀性和可維護性。
+
+<br />
+
+## .pipe 檔
+
+用途： Pipe (管道) 用於轉換和格式化資料，使其在 template 中更方便呈現預想的樣式。
+
+- `.pipe.ts`
+
+    功能： 定義一個 Pipe 的類別和轉換行為。
+
+    內容： 包含帶有 `@Pipe` 裝飾器的類別，實現 transform 方法來處理輸入值。
+
+    ```
+    // capitalize.pipe.ts
+
+    import { Pipe, PipeTransform } from '@angular/core';
+
+    @Pipe({
+        name: 'capitalize'
+    })
+
+    export class CapitalizePipe implements PipeTransform {
+        transform(value: string): string {
+            return value.charAt(0).toUpperCase() + value.slice(1);
+        }
+    }
+    ```
+    
+    - `@Pipe` 裝飾器：用來定義 Pipe，包含 name 屬性，用於指定 Pipe 的名稱。這個名稱會在模板中使用。
+
+    - `PipeTransform` 介面：要求 Pipe 實現 `transform` 方法，用於實際的資料轉換。
+
+    - `transform` 方法：接受一個輸入值，並返回轉換後的值。這裡將字串的首字母轉為大寫，其餘字母轉為小寫。
+
+    完成 `capitalize.pipe.ts` 後，在想要使用的 Component 中引入 `CapitalizePipe`。
+    
+    ```
+    // example.component.ts
+
+    import { Component } from '@angular/core';
+
+    @Component({
+        selector: 'app-example',
+        standalone: true,
+        templateUrl: './example.component.html',
+        styleUrl: './example.component.scss',
+        imports: []
+    })
+
+    export class ExampleComponent {}
+    ```
+
+    ```
+    <!-- example.component.html -->
+    
+    <h1>{{ 'hello world' | capitalize }}</h1>
+    ```
