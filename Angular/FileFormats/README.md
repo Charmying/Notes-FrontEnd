@@ -344,3 +344,27 @@ Module 是 Angular 應用程式的基本結構單位，通過將組件、service
     
     <h1>{{ 'hello world' | capitalize }}</h1>
     ```
+
+<br />
+
+## .enum 檔
+
+用途： Enum (枚舉) 用於定義一組有命名的常數，增強程式碼的可讀性和可維護性。
+
+- `.enum.ts`
+
+    功能： 定義枚舉類型。
+
+    內容： 包含 TypeScript 枚舉。
+    
+    ```
+    // user-role.enum.ts
+
+    export enum UserRole {
+        Admin = 'ADMIN',
+        User = 'USER',
+        Guest = 'GUEST'
+    }
+    ```
+
+.enum 檔能夠幫助使用命名的常數來提高程式碼的可讀性，避免寫死 (hard-coding)，並且讓程式碼更具可維護性。
