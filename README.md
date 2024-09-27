@@ -27,3 +27,5 @@
 `2024-09-14` [Angular 的 Pipe](https://github.com/Charmying/Notes-FrontEnd/issues/11)
 
 `2024-09-15` [Angular 的 FormGroup](https://github.com/Charmying/Notes-FrontEnd/issues/12)
+
+`2024-09-28` [關於 NVM 的使用](https://github.com/Charmying/Notes-FrontEnd/issues/13)
