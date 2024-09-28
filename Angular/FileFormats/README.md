@@ -368,3 +368,71 @@ Module 是 Angular 應用程式的基本結構單位，通過將組件、service
     ```
 
 .enum 檔能夠幫助使用命名的常數來提高程式碼的可讀性，避免寫死 (hard-coding)，並且讓程式碼更具可維護性。
+
+<br />
+
+## .environment 檔
+
+用途： 定義不同環境 (例如：開發、測試、生產) 下的配置，例如：API 路徑、調試選項等。
+
+### `environment.ts` 和 `environment.prod.ts` 的差異
+
+- `environment.ts`
+
+    用途：用於開發環境，當在本地開發應用程式時，Angular 會使用這個檔案中的設定。
+
+    設定內容：通常包含一些適用於開發環境的設定，例如：測試伺服器的 API URL、開發中使用的特殊功能開關等。
+
+    ```
+    export const environment = {
+        production: false,
+        apiUrl: 'http://localhost:3000/api',
+        debugMode: true
+    };
+    ```
+    
+    - `production`：表示當前環境是否為生產環境，false 表示開發環境。
+
+    - `apiUrl`：定義了 API 伺服器的 URL，在開發過程中用於連接到本地伺服器。
+
+    - `featureFlag`：控制某些功能是否啟用，可以根據需要開啟或關閉特性。
+
+- `environment.prod.ts`
+
+    用途：用於生產環境，當要將應用程式部署到生產環境時，Angular 會使用這個檔案中的設定。
+
+    設定內容：包含適用於生產環境的設定，例如：生產伺服器的 API URL、關閉開發中使用的特殊功能 (例如：除錯模式) 等。
+
+    ```
+    export const environment = {
+        production: true,
+        apiUrl: 'https://api.example.com',
+        debugMode: false
+    };
+    ```
+    
+    - `production`：設定為 true 表示此檔案用於生產環境。
+
+    - `apiUrl`：定義了生產環境的 API 伺服器 URL。
+
+    - `featureFlag`：通常在生產環境中禁用某些功能。
+
+### 使用方式
+
+Angular 使用 `fileReplacements` 機制來根據環境自動替換 `environment.ts`。在 `angular.json` 中可以看到這個設定
+
+```
+"configurations": {
+    "production": {
+        "fileReplacements": [
+            {
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.prod.ts"
+            }
+        ],
+        ...
+    }
+}
+```
+
+當使用 `ng build --prod` 進行專案編譯時，Angular 會自動將 `environment.ts` 替換為 `environment.prod.ts`。這樣可以確保應用程式在不同的環境中使用正確的設定。
