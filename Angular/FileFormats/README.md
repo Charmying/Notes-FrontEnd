@@ -436,3 +436,41 @@ Angular 使用 `fileReplacements` 機制來根據環境自動替換 `environment
 ```
 
 當使用 `ng build --prod` 進行專案編譯時，Angular 會自動將 `environment.ts` 替換為 `environment.prod.ts`。這樣可以確保應用程式在不同的環境中使用正確的設定。
+
+## .directive 檔
+
+用途： Directive 用於擴展或操縱 DOM 元素的行為。自定義指令可用於實現複雜的交互效果或重用的行為操作。
+
+- `.directive.ts`
+
+    功能： 定義一個指令的類別和相關操作。
+
+    內容： 包含帶有 `@Directive` 裝飾器的類別，指定指令的選擇器和行為。
+
+    ```
+    // highlight.directive.ts
+
+    import { Directive, ElementRef, HostListener } from '@angular/core';
+
+    @Directive({
+        selector: '[appHighlight]'
+    })
+
+    export class HighlightDirective {
+        constructor(private el: ElementRef) {}
+
+        @HostListener('mouseenter')
+        onMouseEnter() {
+            this.highlight('yellow');
+        }
+
+        @HostListener('mouseleave')
+        onMouseLeave() {
+            this.highlight(null);
+        }
+
+        private highlight(color: string) {
+            this.el.nativeElement.style.backgroundColor = color;
+        }
+    }
+    ```
