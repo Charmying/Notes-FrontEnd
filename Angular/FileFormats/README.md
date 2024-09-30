@@ -474,3 +474,44 @@ Angular 使用 `fileReplacements` 機制來根據環境自動替換 `environment
         }
     }
     ```
+
+<br />
+
+## .guard 檔
+
+用途： Guard (路由守衛) 用於控制路由存取和導航的權限，決定用戶是否可以導航到特定路由。
+
+- `.guard.ts`
+
+    功能： 定義路由守衛的類別和驗證邏輯。
+
+    內容： 實現 Angular 的路由守衛介面，例如：CanActivate、CanDeactivate 等。
+
+
+    ```
+    // auth.guard.ts
+
+    import { Injectable } from '@angular/core';
+    import { CanActivate, Router } from '@angular/router';
+
+    @Injectable({
+        providedIn: 'root'
+    })
+
+    export class AuthGuard implements CanActivate {
+        constructor(private router: Router) {}
+
+        canActivate(): boolean {
+            if (/* 檢查用戶是否已登入 */) {
+                return true;
+            } else {
+                this.router.navigate(['/login']);
+                return false;
+            }
+        }
+    }
+    ```
+
+    - `CanActivate` 介面：用於檢查是否允許進入特定路由。
+    
+    - `canActivate` 方法：如果用戶未認證，重定向至登錄頁面，返回 false 表示不允許導航。
