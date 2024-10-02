@@ -13,3 +13,16 @@ const arr = [1, 2, 3];
 
 console.log(arr.length);   // 3
 ```
+
+<br />
+
+## push()
+
+將元素添加到陣列的末尾。
+
+```
+const arr = [1, 2, 3];
+arr.push(5);
+
+console.log(arr);   // [1, 2, 3, 5]
+```
