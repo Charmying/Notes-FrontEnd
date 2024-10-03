@@ -26,3 +26,17 @@ arr.push(5);
 
 console.log(arr);   // [1, 2, 3, 5]
 ```
+
+<br />
+
+## pop()
+
+移除並返回陣列的最後一個元素。
+
+```
+const arr = [1, 2, 3];
+const last = arr.pop();
+
+console.log(last);   // 3
+console.log(arr);   // [1, 2]
+```
