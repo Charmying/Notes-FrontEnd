@@ -67,3 +67,16 @@ arr.unshift(1);
 
 console.log(arr);   // [1, 2, 3]
 ```
+
+<br />
+
+## splice()
+
+添加、移除或替換陣列中的元素。
+
+```
+const arr = [1, 2, 3, 4];
+arr.splice(2, 1, 'a', 'b'); 
+
+console.log(arr);   // [1, 2, 'a', 'b', 4]
+```
