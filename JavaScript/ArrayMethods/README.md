@@ -80,3 +80,16 @@ arr.splice(2, 1, 'a', 'b');
 
 console.log(arr);   // [1, 2, 'a', 'b', 4]
 ```
+
+<br />
+
+## slice()
+
+功返回一個新的陣列，包含從開始索引到結束索引 (不包含結束索引) 的部分元素。
+
+```
+const arr = [1, 2, 3, 4];
+const newArr = arr.slice(1, 3);
+
+console.log(newArr);   // [2, 3]
+```
