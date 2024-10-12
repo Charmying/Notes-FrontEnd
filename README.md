@@ -29,3 +29,5 @@
 `2024-09-15` [Angular 的 FormGroup](https://github.com/Charmying/Notes-FrontEnd/issues/12)
 
 `2024-09-28` [關於 NVM 的使用](https://github.com/Charmying/Notes-FrontEnd/issues/13)
+
+`2024-10-13` [By Value 和 By Reference 的差別](https://github.com/Charmying/Notes-FrontEnd/issues/14)
