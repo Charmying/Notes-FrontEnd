@@ -93,3 +93,17 @@ const newArr = arr.slice(1, 3);
 
 console.log(newArr);   // [2, 3]
 ```
+
+<br />
+
+## concat()
+
+合併兩個或多個陣列，返回一個新陣列。
+
+```
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const arr = arr1.concat(arr2);
+
+console.log(arr);   // [1, 2, 3, 4]
+```
