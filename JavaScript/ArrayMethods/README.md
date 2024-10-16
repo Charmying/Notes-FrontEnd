@@ -120,3 +120,16 @@ const str = arr.toString();
 
 console.log(str);   // 1,2,3
 ```
+
+<br />
+
+## join()
+
+將陣列轉換為字串，可以指定分隔符號。
+
+```
+const arr = [1, 2, 3];
+const str = arr.join('-');
+
+console.log(str);   // 1-2-3
+```
