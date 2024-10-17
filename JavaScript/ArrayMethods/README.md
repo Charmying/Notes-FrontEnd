@@ -133,3 +133,20 @@ const str = arr.join('-');
 
 console.log(str);   // 1-2-3
 ```
+
+<br />
+
+## forEach()
+
+為陣列中的每個元素執行一次提供的函式。
+
+```
+const arr = [1, 2, 3];
+arr.forEach(element => {
+  console.log(element);
+});
+
+// 1
+// 2
+// 3
+```
